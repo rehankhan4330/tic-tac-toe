@@ -1,51 +1,111 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tic Tac Toe</title>
-    <style>
-        .container {
-            
-        }
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-      .row {
-        display: flex;
-      }
-      .col {
-        height: 65px;
-        width: 65px;
-        border: 1px solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 30px;
-      }
-    </style>
-  </head>
-  <body>
-    <h2 id="result"></h2>
-    <div class="container">
-      <div class="grid">
-        <div class="row">
-          <div onclick="handleClick(this)" id="0" class="col"></div>
-          <div onclick="handleClick(this)" id="1" class="col"></div>
-          <div onclick="handleClick(this)" id="2" class="col"></div>
-        </div>
-        <div class="row">
-          <div onclick="handleClick(this)" id="3" class="col"></div>
-          <div onclick="handleClick(this)" id="4" class="col"></div>
-          <div onclick="handleClick(this)" id="5" class="col"></div>
-        </div>
-        <div class="row">
-          <div onclick="handleClick(this)" id="6" class="col"></div>
-          <div onclick="handleClick(this)" id="7" class="col"></div>
-          <div onclick="handleClick(this)" id="8" class="col"></div>
-        </div>
-      </div>
-    </div>
-    <script src="script.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tic Tac Toe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+		<style>
+			.container {
+			}
+			/* Body aur fonts */
+			body {
+				font-family: "Poppins", sans-serif; /* Modern font */
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				flex-direction: column;
+				background-color: #f5f5f5;
+			}
+
+			/* Title */
+			h1 {
+				font-size: 48px;
+				color: #081b31;
+				font-weight: 700; /* Bold */
+				margin-bottom: 10px;
+			}
+
+			/* Description */
+			p {
+				font-size: 18px;
+				color: #333;
+				font-weight: 400; /* Normal */
+				margin-bottom: 20px;
+			}
+
+			/* Result */
+			h2#result {
+				margin-bottom: 20px;
+				font-size: 28px;
+				color: #081b31;
+			}
+
+			/* Game Grid */
+			.container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.grid {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.row {
+				display: flex;
+			}
+
+			.col {
+				height: 80px;
+				width: 80px;
+				border: 2px solid #081b31;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 40px;
+				cursor: pointer;
+				background-color: #fff;
+				transition: 0.2s;
+				user-select: none;
+				font-weight: 600; /* Bold X/O */
+			}
+
+			.col:hover {
+				background-color: #e0e0e0;
+				transform: scale(1.05);
+				border-color: #000;
+				transition: 0.2s;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Tic Tac Toe</h1>
+		<!-- Title -->
+		<p>Play with your friend! Click on a cell to start the game.</p>
+		<!-- Optional description -->
+		<h2 id="result"></h2>
+		<div class="container">
+			<div class="grid">
+				<div class="row">
+					<div onclick="handleClick(this)" id="0" class="col"></div>
+					<div onclick="handleClick(this)" id="1" class="col"></div>
+					<div onclick="handleClick(this)" id="2" class="col"></div>
+				</div>
+				<div class="row">
+					<div onclick="handleClick(this)" id="3" class="col"></div>
+					<div onclick="handleClick(this)" id="4" class="col"></div>
+					<div onclick="handleClick(this)" id="5" class="col"></div>
+				</div>
+				<div class="row">
+					<div onclick="handleClick(this)" id="6" class="col"></div>
+					<div onclick="handleClick(this)" id="7" class="col"></div>
+					<div onclick="handleClick(this)" id="8" class="col"></div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>
